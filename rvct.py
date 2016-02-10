@@ -43,12 +43,12 @@ def summarize(inShp, outCsv):
     writer.writerow(colLabels)
 
     for i in range(0, len(rowLabels), 1):
-        rowList = [rowLabels[i], rowValues[i], rowValues[i]/rowValues[-1]*100.0]
+        rowList = [rowLabels[i], rowValues[i], rowValues[i]/rowValues[-1]]
         writer.writerow(rowList)
 
     file.close()
 
 #Test funcs
-path = r'E:\etal\Projects\USA\Utah\RiparianCondition\ConversionType\RVCT_SG_BoxElder.shp'
-csvPath = r'C:\Users\khafe\Desktop\rvct.csv'
+path = r'E:\etal\Projects\USA\Utah\RiparianCondition\ConversionType\RVCT_SageGrouse.shp'
+csvPath = r'C:\Users\khafe\Desktop\rvct_all.csv'
 summarize(path, csvPath)
